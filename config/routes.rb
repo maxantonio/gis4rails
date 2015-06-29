@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  mount MySinatraApp.new => '/'
   get 'admin/index'
 
   devise_for :users
@@ -6,7 +8,8 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-   root 'admin#index'
+   #root 'admin#index'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
