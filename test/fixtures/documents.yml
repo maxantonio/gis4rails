@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company_id: 1
+  doc_category_id: 1
+  content_id: 1
+  name: MyString
+  name_translation: MyString
+  file: MyString
+  file_translation: MyString
+  release_date: 2015-06-29
+
+two:
+  company_id: 1
+  doc_category_id: 1
+  content_id: 1
+  name: MyString
+  name_translation: MyString
+  file: MyString
+  file_translation: MyString
+  release_date: 2015-06-29

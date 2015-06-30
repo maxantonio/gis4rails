@@ -1,0 +1,76 @@
+/*  Resolutions below 1200px  */
+            
+@media (max-width: 1200px) {
+
+
+}  
+
+/*  Resolutions below 980px  */
+
+@media (max-width: 980px) {
+
+/*                 
+  .back-to-top {
+    float:left;
+  }               
+*/
+
+}  
+
+/*  Resolutions below 768px  */
+
+@media (max-width: 768px) {
+
+  .container {
+    padding-left:10px !important;
+    padding-right:10px !important;
+  }
+  
+/*
+  .newsletter p{
+    padding-top:15px;
+  }
+ 
+  .newsletter .nl-input{
+    padding-top:30px;
+*/
+
+  /* vertical padding for span* */
+  [class*="span"] {
+    margin-bottom: 12px !important;
+  }
+
+
+
+
+
+
+  /* Main Navigation - Hidden */
+/*  
+  .navbar .nav {
+    display:none !important;
+  }
+
+  .navbar {
+    float:left !important;
+    width:100%;
+  }
+*/
+  /* Select Box Navigation - Show */
+  /*  .navbar .nav-responsive {
+    display:block !important;
+    width:100%;
+    clear:both;
+  }  
+  
+  .menu-shop .navbar .nav-responsive {
+    margin-top:20px;
+  }
+*/
+ 
+}
+
+
+
+
+
