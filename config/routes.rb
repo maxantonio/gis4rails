@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  get 'admin' => 'admin#index'
 
   resources :documents
   mount MySinatraApp.new => '/'
-  get 'admin/index'
 
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.

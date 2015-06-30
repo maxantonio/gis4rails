@@ -1,6 +1,7 @@
 class MySinatraApp < Sinatra::Application
   # your sinatra application definitions
-  get '/' do
-  "Hello World sdfs!"
-end
+  #require '/lib/MySinatraApp.rb'
+  require "#{Rails.root}/lib/MySinatraApp.rb" 
+
+
 end
