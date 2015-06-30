@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :documents
   mount MySinatraApp.new => '/'
   get 'admin/index'
 
