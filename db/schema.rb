@@ -16,14 +16,13 @@ ActiveRecord::Schema.define(version: 20150629224209) do
   create_table "documents", force: :cascade do |t|
     t.integer  "company_id"
     t.integer  "doc_category_id"
-    t.integer  "content_id"
+    t.integer  "user_id"
+    t.integer  "language"
     t.string   "name"
-    t.string   "name_translation"
     t.string   "file"
-    t.string   "file_translation"
     t.date     "release_date"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
     t.boolean  "publicado"
   end
 
