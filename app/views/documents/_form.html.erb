@@ -1,0 +1,70 @@
+<%= form_for @document, html: { multipart: true } do |f| %>
+  <% if @document.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@document.errors.count, "error") %> prohibited this document from being saved:</h2>
+
+      <ul>
+      <% @document.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <div class="form-group">
+      <%= f.label :name %>
+      <br/>
+      <%= f.text_field :name, :class => 'form-control ', autofocus: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :name_translation %>
+      <br/>
+      <%= f.text_field :name_translation, :class => 'form-control ', autofocus: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :doc_category_id %>
+      <br/>
+      <%= f.text_field :doc_category_id, :class => 'form-control ', autofocus: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :content_id %>
+      <br/>
+      <%= f.text_field :content_id, :class => 'form-control ', autofocus: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :file %>
+      <br/>
+      <%= f.file_field :file %><br/>
+      <%= f.hidden_field :file_cache %>
+
+    </div>
+
+    <div class="form-group">
+      <%= f.label :file_translation %>
+      <br/>
+      <%= f.file_field :file_translation %><br/>
+
+
+    </div>
+
+    <div class="form-group">
+      <%= f.label :release_date %>
+      <br/>
+      <%= f.text_field :release_date, :class => 'form-control ', autofocus: true %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :publicado %>
+      <br/>
+      <%= f.text_field :publicado, :class => 'form-control ', autofocus: true %>
+    </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

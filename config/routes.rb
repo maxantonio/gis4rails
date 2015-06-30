@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'admin' => 'admin#index'
 
+  resources :documents
   mount MySinatraApp.new => '/'
 
   devise_for :users
