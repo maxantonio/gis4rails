@@ -1,0 +1,73 @@
+<div id="test_page" xmlns="http://www.w3.org/1999/html">
+  <% if form.failed? %>
+      <% if form.failed_on?(:name) %>
+          <p class="alert-danger">El Campo Título no puede ser vacio</p>
+      <% end %>
+      <% if form.failed_on?(:create_at) %>
+          <p class="alert-danger" >El campo fecha no puede ser vacio</p>
+      <% end %>
+      <% if form.failed_on?(:file) %>
+          <p class="alert-danger">EL campo de documento no puede ser vacio</p>
+      <% end %>
+  <% end %>
+  <form action="/es/up" method="post" enctype="multipart/form-data">
+    <label for="name">Nombre del Documento</label><br>
+    <input class="form-control" type="text" name="name"/><br>
+    <label for="created_at">Fecha del Documento</label><br>
+    <input class="form-control" id="datepicker" type="text" name="created_at"/><br>
+    <label for="file">Subir Archivo</label><br>
+    <span class="btn btn-default btn-file">
+        Browse <input type="file" name="file"/></br>
+    </span>
+    <input class="btn btn-default" type="submit" name="submit" value="Upload"/>
+  </form>
+  <div class="lista_img">
+    <table class="display table table-bordered table-striped datatableId" data-ride="benchmarking">
+      <thead>
+      <tr>
+        <th class="col-md-9"><%= I18n.t 'Documento' %></th>
+        <th><%= I18n.t 'Publicación' %></th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <% @anuals.each do |anual| %>
+          <tr>
+            <td><i class="fa fa-download"></i>
+              <a href="<%= anual.file.url %>" target="_blank" onclick="ga('send', 'event','Inversionistas','<%= anual.name %>','<%= anual.name %>');"><%= anual.name %> </a>
+            </td>
+            <td><%= Date.parse(anual.created_at.to_s) %></td>
+          </tr>
+      <% end %>
+
+      </tbody>
+    </table>
+    <!--
+    <% @anuals.each do |anual| %>-->
+        <!--<img style="width: 50%; float: left" src="<%= anual.file.url %>" />-->
+        <!--
+    <% end %>-->
+  </div>
+
+</div>
+<style type="text/css">
+    .btn-file {
+        position: relative;
+        overflow: hidden;
+    }
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+</style>

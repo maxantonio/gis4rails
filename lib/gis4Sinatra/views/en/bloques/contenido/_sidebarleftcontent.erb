@@ -1,0 +1,109 @@
+<!--left content-->
+<div class="hidden-xs hidden-sm col-md-2 col-lg-2 sidebars">
+  <!-- Accordion -->
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+            <%= I18n.t 'Nosotros' %>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="<%= actual_menu (1) %>">
+        <div class="panel-body">
+          <ul class="list-b">
+            <!--ciclo menu perfil-->
+
+            <li><a href="/<%= I18n.locale %>/historia"><%= I18n.t 'Historia' %></a></li>
+            <li><a href="/<%= I18n.locale %>/perfil"><%= I18n.t 'Perfil' %></a></li>
+            <li><a href="/<%= I18n.locale %>/estrategia"><%= I18n.t 'Estrategia' %></a></li>
+            <li><a href="/<%= I18n.locale %>/gis-numeros"><%= I18n.t 'GIS en números' %></a></li>
+            <li><a href="/<%= I18n.locale %>/directivos"><%= I18n.t 'Equipo directivo' %></a></li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+            <%= I18n.t 'Gobierno corporativo' %>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseTwo" class="<%= actual_menu (2) %>">
+        <div class="panel-body">
+          <ul class="list-b">
+            <!--Ciclo de menu-->
+
+            <li><a href="/<%= I18n.locale %>/consejo-administracion"><%= I18n.t 'Consejo de Administración' %></a></li>
+            <li><a href="/<%= I18n.locale %>/comites"><%= I18n.t 'Comités' %></a></li>
+            <li><a href="/<%= I18n.locale %>/codigos-estatutos"><%= I18n.t 'Códigos y estatutos' %></a></li>
+            <li><a href="/<%= I18n.locale %>/estructura-accionaria"><%= I18n.t 'Estructura accionaria' %></a></li>
+            <li><a href="/<%= I18n.locale %>/auditor-externo"><%= I18n.t 'Auditor externo' %></a></li>
+
+
+            <!--Fin ciclo menu-->
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+            <%= I18n.t 'Información financiera' %>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseThree" class="<%= actual_menu (3) %>">
+        <div class="panel-body">
+          <ul class="list-b">
+            <!--Ciclo menu-->
+            <li><a href="/<%= I18n.locale %>/fundamentales"> <%= I18n.t 'Fundamentales' %></a></li>
+            <li><a href="/<%= I18n.locale %>/informes-trimestrales"><%= I18n.t 'Informes trimestrales' %></a></li>
+            <li><a href="/<%= I18n.locale %>/informes-anuales"><%= I18n.t 'Informes anuales' %></a></li>
+            <li><a href="/<%= I18n.locale %>/comunicados"><%= I18n.t 'Comunicados' %></a></li>
+            <li><a href="/<%= I18n.locale %>/registros-bmv"><%= I18n.t 'Registros BMV' %></a></li>
+            <li><a href="/<%= I18n.locale %>/calendario-financiero"><%= I18n.t 'Calendario' %></a></li>
+            <li><a href="/<%= I18n.locale %>/preguntas-frecuentes"><%= I18n.t 'Preguntas frecuentes' %></a></li>
+
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour">
+            <%= I18n.t 'infbursatil' %>
+          </a>
+        </h4>
+      </div>
+      <div id="collapseFour" class="<%= actual_menu (4) %>">
+        <div class="panel-body">
+          <ul class="list-b">
+            <!--ciclo menu-->
+            <li><a href="/<%= I18n.locale %>/cotizacion-accion"><%= I18n.t 'Cotización de la acción' %></a></li>
+            <li><a href="/<%= I18n.locale %>/dividendos"><%= I18n.t 'Dividendos' %></a></li>
+            <li><a href="/<%= I18n.locale %>/razones-financieras"><%= I18n.t 'Razones financieras' %></a></li>
+            <li><a href="/<%= I18n.locale %>/cobertura-analistas"><%= I18n.t 'Cobertura de analistas' %></a></li>
+            <li><a href="/<%= I18n.locale %>/glosario"><%= I18n.t 'Glosario' %></a></li>
+
+
+            <!--fin ciclo menu-->
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Accordion End -->
+
+
+</div>
+
+
+<!--/left content-->

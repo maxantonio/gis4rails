@@ -1,0 +1,70 @@
+<!--rigth menu-->
+
+      <div class="hidden-xs hidden-sm col-md-2 sidebars sidebar2">
+         <h4><%= I18n.t 'Links financieros' %></h4>
+          <ul class="list-a">
+          <li><a href="http://www.bloomberg.com/quote/GISSAA:MM" target="_blank"><i class="fa fa-chevron-right"></i>Bloomberg - GIS</a></li>
+          <li><a href="http://www.reuters.com/finance/stocks/overview?symbol=GISSAA.MX" target="_blank"><i class="fa fa-chevron-right"></i>Reuters - GIS</a></li>
+          <li><a href="https://finance.yahoo.com/q?s=GISSAA.MX&ql=1" target="_blank"><i class="fa fa-chevron-right"></i>Yahoo finance - GIS</a></li>            
+        </ul> 
+        <div class="space10"></div>             
+        <h4><%= I18n.t 'Informe Anual' %></h4>
+        <div class="o-h"> 
+        <div class="gis-miniphoto">         
+           <a href="<%=@informes_anuales%>/2014-GIS-Informe-Anual.pdf" target="_blank">
+                    <img src="/images/gis/sostenibilidad.png" class="img-responsive" alt="Informe anual 2014">
+                </a>
+                <a href="<%= @informes_anuales %>/2013-GIS-Informe-Anual.pdf" target="_blank">
+                    <img src="/images/gis/anual2013.png" class="img-responsive" alt="Informe anual 2013">
+                </a>
+          <h4><%= I18n.t 'Informes trimestrales' %></h4>
+                </a>
+                  <div class="col-lg-6" style="padding: 0">
+                    <a href="<%= @informes_trimestrales %>/2015-GIS-1T15.pdf" target="_blank">
+                    <img style="position: relative" src="/images/gis/trimestral_side.png" class="img-responsive" alt="Informe trimestral">
+                    <span class="trimestre"><b>1T15</b></span>
+                  </a></div>
+                  <div class="col-lg-6" style="padding: 0">
+                    <a  href="<%= @informes_trimestrales %>/2014-GIS-4T14.pdf" target="_blank">
+                      <img style="position: relative" src="/images/gis/trimestral_side.png" class="img-responsive" alt="Informe trimestral">
+                      <span class="trimestre"><b>4T14</b></span>
+                    </a>
+                  </div>
+
+                <h4><%= I18n.t 'Sostenibilidad' %> </h4>
+                <% if I18n.locale == :es %>
+                 <a href="<%= @investor_cloud_path%>/sostenibilidad/Informe_2013.pdf" target="_blank"><img src="/images/gis/sostenibilidad-2013.jpg" class="img-responsive" alt="Informe trimestral">
+                </a>
+                <a href="<%= @investor_cloud_path%>/sostenibilidad/Informe_2012.pdf" target="_blank"><img src="/images/gis/sostenibilidad-2012.jpg" class="img-responsive" alt="Informe trimestral">
+                </a>
+                <% else %>
+                <a href="<%= @investor_cloud_path%>/sostenibilidad/Informe_2013_en.pdf" target="_blank"><img src="/images/gis/sostenibilidad-2013.jpg" class="img-responsive" alt="Informe trimestral">
+                </a>
+                <a href="<%= @investor_cloud_path%>/sostenibilidad/Informe_2012_en.pdf" target="_blank"><img src="/images/gis/sostenibilidad-2012.jpg" class="img-responsive" alt="Informe trimestral">
+                </a>
+                <% end %>
+         </div>       
+        </div>
+        
+        <div class="space10"></div>
+         <h4><%= I18n.t 'Noticias Recientes' %></h4>
+        <ul class="list-a">
+          <li><a href="http://www.vanguardia.com.mx/llevaraagisporunarutacontinua-1989881.html" target="_blank"><i class="fa fa-chevron-right"></i>Llevará a GIS por una ruta continua...</a></li>
+          <li><a href="http://www.am.com.mx/notareforma/30212" target="_blank"><i class="fa fa-chevron-right"></i>Busca Cinsa entrar a todo EU...</a></li>
+          <li><a href="http://www.vanguardia.com.mx/repuntautilidadnetadegissaenelprimertrimestredelano-2005354.html" target="_blank"><i class="fa fa-chevron-right"></i>Repunta utilidad neta de GISSA...</a></li>            
+        </ul>    
+        
+        <div class="space10"></div>
+        <h4><%= I18n.t 'ricontacto' %></h4> 
+            <p>
+                <i class="fa fa-envelope"></i><a href="mailto:saul.castaneda@gis.com.mx" title="Contacto" target="_top"> Saúl Castañeda</a>
+                <br><i class="fa fa-phone-square"></i><a> (844) 411 1050</a>  
+            </p>
+        <div class="space10"></div>
+      </div> 
+
+
+
+<!--/rigth menu-->
+
+

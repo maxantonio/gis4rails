@@ -1,0 +1,76 @@
+<div id="headerTop" class="header-top clearfix">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <!-- Top right side content -->
+        <ul class="list-inline top-info">
+          <li>
+            <% if I18n.locale == :es %>
+                <a href="<%= change_language%>">
+                <img width="16" height="11" src="http://cdn.investorcloud.net/GIS/site/img/english.jpg" style="width: 16px;">
+                </a>
+                &nbsp; <a href="<%= change_language%>"> English</a>
+
+            <% else %>
+                <a href="<%= change_language%>">
+                <img width="16" height="11" src="http://cdn.investorcloud.net/GIS/site/img/spanish.jpg" style="width: 16px;">
+                </a>
+                &nbsp;<a href="<%= change_language%>"> Español</a>
+            <%end%>
+            | </li>
+
+          <li>
+          <a href="http://portales.gis.com.mx/" target="_blank">
+            <%= t 'Acceso a proveedores'%></a>|
+          </li>
+          <li>
+          <a href="http://oportunidades.gis.com.mx/" title="Oportunidades" target="_blank">
+            <%= I18n.t 'Oportunidades GIS' %></a> |
+          </li>
+
+          <li>
+          <a href="/<%= I18n.locale %>/comunicados" title="Noticias" target="_blank">
+            <%= I18n.t 'Noticias_GIS' %></a>
+          </li>
+
+        </ul>
+      </div>
+      <!-- Top right side content -->
+      <div class="col-md-6">
+        <ul class="list-inline top-social">
+          <li>
+            <a href="mailto:ri@gis.com.mx" title="Contacto" target="_top">
+              <i class="fa fa-envelope">
+              </i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/GIS.mx" title="Contacto" target="_blank">
+              <i class="fa fa-facebook">
+              </i>
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/gis_mx" title="Contacto" target="_blank">
+              <i class="fa fa-twitter">
+              </i>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.linkedin.com/company/grupo-industrial-saltillo" title="Contacto" target="_blank">
+              <i class="fa fa-linkedin">
+              </i>
+            </a>
+          </li>
+          <li>
+            <a href="/<%= I18n.locale %>/comunicados" title="rss" target="_blank">
+              <i class="fa fa-rss">
+              </i>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

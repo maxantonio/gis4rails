@@ -1,0 +1,31 @@
+<!--Doctype-->
+<%= erb :"/multidioma/bloques/generales/doctype" %>
+<!--head-->
+<%= erb :"/multidioma/bloques/generales/head" %>
+
+<body>
+
+
+<!--header-->
+
+<header id="home">
+
+<%= erb :"/multidioma/bloques/generales/topbar" %>
+<%= erb :"/multidioma/bloques/generales/menu" %>
+
+</header>
+<!-- Header End -->
+
+
+<%= yield %>
+
+
+
+<%= erb :"/multidioma/bloques/generales/promo" %>
+
+<%= erb :"/multidioma/bloques/generales/footer" %>
+<%= erb :"/multidioma/bloques/generales/js" %>
+
+
+</body>
+</html>

@@ -1,0 +1,190 @@
+<nav class="navbar navbar-fixed-top" role="navigation">
+  <div class="navbar-inner">
+    <div class="container">
+      <div id="encabezado" style="" class="row">
+        <div class="col-md-9">
+          <!-- Logo -->
+          <a href="/"><img src="http://cdn.investorcloud.net/GIS/site/img/gislogo1.png" alt="" class="logo"></a>
+
+
+          <ul class="nav navbar-nav">
+
+
+            <!-- Menu 1 -->
+
+            <li class=""><a href="#"><%= I18n.t 'Nuestro Grupo' %></a>
+              <!-- Submenu -->
+              <ul>
+                <li><a href="<%= ruta_externa %>/perfil.php"><%= I18n.t 'Perfil' %></a></li>
+                <li><a href="<%= ruta_externa %>/numeros.php"><%= I18n.t 'GIS en números' %></a></li>
+                <li><a href="<%= ruta_externa %>/historia.php"><%= I18n.t 'Historia' %></a></li>
+                <li><a href="<%= ruta_externa %>/filosofia.php"><%= I18n.t 'Filosofía corporativa' %></a></li>
+                <li><a href="<%= ruta_externa %>/etica.php"><%= I18n.t 'Código de Ética' %></a></li>
+              </ul>
+              <!-- Submenu End -->
+            </li>
+
+
+            <!-- Menu 2 -->
+
+            <li><a href="#"><%= I18n.t 'Negocios' %></a>
+              <!-- Submenu -->
+              <ul>
+                <li><a href="<%= ruta_externa %>/autopartes.php" title=""><%= I18n.t 'Autopartes' %><i class="fa fa-chevron-right"></i></a>
+
+
+                <li>
+                  <a href="#"><%= I18n.t 'Construcción' %> <i class="fa fa-chevron-right"></i></a>
+                  <ul class="submenu-3">
+
+
+                  <li><a href="<%= ruta_externa %>/recubrimientos.php"><%= I18n.t 'Recubrimientos' %></a></li>
+                  <li><a href="<%= ruta_externa %>/calentadores.php"><%= I18n.t 'Calentadores' %></a></li>
+                  <li><a href="<%= ruta_externa %>/fluidos.php"><%= I18n.t 'Conducción de fluidos' %></a></li>
+
+
+
+
+
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"><%= I18n.t 'Hogar' %> <i class="fa fa-chevron-right"></i></a>
+                  <!-- Submenu 3 hogar -->
+                  <ul class="submenu-3">
+
+                    <li><a href="<%= ruta_externa %>/cocina.php"><%= I18n.t 'Cocina' %></a></li>
+                    <li><a href="<%= ruta_externa %>/mesa.php"><%= I18n.t 'Mesa' %></a></li>
+
+                  </ul>
+                </li>
+
+
+              </ul>
+              <!-- Submenu End -->
+            </li>
+
+
+            <!-- Menu 3 -->
+
+            <li class="<% if @menuNumber != 0 && @data[:menuNumber] != 5 %>active<% end %>
+
+
+             " id="inversionistas"><a href="/" title=""><%= I18n.t 'Inversionistas' %></a>
+              <!-- Submenu -->
+              <ul>
+                <li>
+                  <a href="#" title=""><%= I18n.t 'Nosotros' %> <i class="fa fa-chevron-right"></i></a>
+                  <ul class="submenu-3">
+                    <li><a href="/<%= I18n.locale %>/historia"><%= I18n.t 'Historia' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/perfil"><%= I18n.t 'Perfil' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/estrategia"><%= I18n.t 'Estrategia' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/gis-numeros"><%= I18n.t 'GIS en números' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/directivos"><%= I18n.t 'Equipo directivo' %></a></li>
+                  </ul>
+                </li>
+                <li>
+
+                  <a href="#" title=""><%= I18n.t 'Gobierno corporativo' %> <i class="fa fa-chevron-right"></i></a>
+                  <ul class="submenu-3">
+                    <li> <a href="/<%= I18n.locale %>/consejo-administracion"><%= I18n.t 'Consejo de Administración' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/comites"><%= I18n.t 'Comités' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/codigos-estatutos"><%= I18n.t 'Códigos y estatutos' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/estructura-accionaria"><%= I18n.t 'Estructura accionaria' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/auditor-externo"><%= I18n.t 'Auditor externo' %></a></li>
+                  </ul>
+                </li>
+
+
+                <li>
+                  <a href="#" title=""><%= I18n.t 'Información financiera' %> <i class="fa fa-chevron-right"></i></a>
+                  <ul class="submenu-3">
+                    <li><a href="/<%= I18n.locale %>/fundamentales"> <%= I18n.t 'Fundamentales' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/informes-trimestrales"><%= I18n.t 'Informes trimestrales' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/informes-anuales"><%= I18n.t 'Informes anuales' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/comunicados"><%= I18n.t 'Eventos relevantes' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/registros-bmv"><%= I18n.t 'Registros BMV' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/calendario-financiero"><%= I18n.t 'Calendario' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/preguntas-frecuentes"><%= I18n.t 'Preguntas frecuentes' %></a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#" title=""><%= I18n.t 'infbursatil' %> <i class="fa fa-chevron-right"></i></a>
+                  <ul class="submenu-3">
+                    <li><a href="/<%= I18n.locale %>/cotizacion-accion"><%= I18n.t 'Cotización de la acción' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/dividendos"><%= I18n.t 'Dividendos' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/razones-financieras"><%= I18n.t 'Razones financieras' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/cobertura-analistas"><%= I18n.t 'Cobertura de analistas' %></a></li>
+                    <li><a href="/<%= I18n.locale %>/glosario"><%= I18n.t 'Glosario' %></a></li>
+                  </ul>
+                </li>
+              </ul>
+              <!-- Submenu End -->
+            </li>
+
+
+            <!-- Menu 4 -->
+
+            <li id="ultimo-menu"><a href="#"><%= I18n.t 'Sostenibilidad' %></a>
+              <!-- Submenu -->
+              <ul>
+                <li>
+                  <a href="/<%= I18n.locale %>/fundamentales" title=""><%= I18n.t 'Impacto económico' %>
+                    <i class="fa fa-chevron-left"></i></a>
+                </li>
+                <li>
+                  <a href="#"><%= I18n.t 'Responsabilidad social' %><i class="fa fa-chevron-left"></i></a>
+                  <!-- Submenu 3 hogar -->
+                  <ul class="submenu-3">
+
+
+                    <li><a href="<%= ruta_externa %>/colaboradores.php"><%= I18n.t 'Nuestros Colaboradores' %></a></li>
+                    <li><a href="<%= ruta_externa %>/comunidades.php"><%= I18n.t 'Nuestras Familias y Comunidades' %></a></li>
+                    <li><a href="<%= ruta_externa %>/sostebililidad-productos.php"><%= I18n.t 'Nuestros Productos' %></a></li>
+
+
+
+
+                  </ul>
+                </li>
+                <li>
+                  <a href="#"><%= I18n.t 'Compromiso ambiental' %><i class="fa fa-chevron-left"></i></a>
+                  <ul class="submenu-3">
+
+
+                    <li><a href="<%= ruta_externa %>/ambiental.php"><%= I18n.t 'Estrategia Ambiental' %></a></li>
+                    <li><a href="<%= ruta_externa %>/ambiental-indicadores.php"><%= I18n.t 'Indicadores de Desempeño' %></a></li>
+
+
+                  </ul>
+                </li>
+
+              </ul>
+              <!-- Submenu End -->
+            </li>
+          </ul>
+        </div>
+
+
+        <!--Busqueda-->
+
+        <div id="col-search" class="col-md-3">
+
+          <form id="busqueda" action="<%= "/#{I18n.locale}/resultados"%>" class="navbar-form" role="">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="<%= I18n.t 'search' %>..." name="q" id="srch-term">
+
+              <div class="input-group-btn ">
+                <button id="buscador" class="btn btn-default" type="submit" style="padding-right: 5px;">
+                  <i class="fa fa-search" style="font-size: 16px;"></i></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <!-- Menu End -->
+    </div>
+  </div>
+</nav>
+

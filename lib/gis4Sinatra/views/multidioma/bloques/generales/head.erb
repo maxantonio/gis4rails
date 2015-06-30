@@ -1,0 +1,81 @@
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="utf-8">
+
+  <% if I18n.locale == :es %>
+
+      <title><%= @data[:tituloES] %> | GIS: Inversionistas</title>
+
+  <% else %>
+
+      <title><%= @data[:tituloEn] %> | GIS: Investors</title>
+
+  <% end%>
+
+
+  <meta name="keywords" content="GIS, grupo indisytial saltillo, cinfinsa, vitromex"/>
+  <meta name="description" content="Grupo Industrial Saltillo">
+  <meta name="author" content="http://irstrat.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--[if (gte IE 9)|!(IE)]>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <![endif]-->
+
+  <!-- Favicon -->
+  <link href="http://cdn.investorcloud.net/GIS/site/img/favicon.ico" rel="icon" type="image/png">
+  <!-- Global css -->
+  <!--<link rel="stylesheet" href="/stylesheets/application.css" media="all"/>-->
+  <link rel="stylesheet" href="/stylesheets/bootstrap.min.css" media="all"/>
+  <link rel="stylesheet" href="/stylesheets/styles-gis.css" media="all"/>
+  <link rel="stylesheet" href="/stylesheets/ajustes.css" media="all"/>
+  <link rel="stylesheet" href="/stylesheets/bootstrap-override.css" media="all"/>
+
+  <!-- LayerSlider Styles -->
+  <link href="/stylesheets/layerslider.css" rel="stylesheet">
+
+  <!-- Flexslider CSS -->
+  <link rel="stylesheet" href="/stylesheets/layerslider.css" media="all"/>
+
+
+  <!-- Flexi Slider Style -->
+  <link rel="stylesheet" href="/stylesheets/owl.carousel.css" media="all"/>
+
+  <!-- Refine Slider -->
+  <link rel="stylesheet" href="/stylesheets/refineslide.css" media="all"/>
+
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="/stylesheets/magnific-popup.css" media="all"/>
+
+  <!-- Animate -->
+  <link rel="stylesheet" href="/stylesheets/animate.css" media="all"/>
+
+  <!-- Font Awesome Style -->
+  <link rel="stylesheet" href="/vendor/fonts/font-awesome41/css/font-awesome.min.css">
+
+  <!-- timeline -->
+  <link rel="stylesheet" href="/stylesheets/timeline.css" media="all"/>
+  <!-- datatables -->
+  <link rel="stylesheet" href="/stylesheets/datatables.css" media="all"/>
+
+
+  <link rel="stylesheet" href="/datatables/jquery.dataTables.min.css"/>
+
+
+
+
+  <!-- Web Fonts -->
+  <link href='http://fonts.googleapis.com/css?family=Philosopher:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,600,700,300,800' rel='stylesheet' type='text/css'>
+
+  <!-- Internet Explorer condition - HTML5 shim, for IE6-8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="/vendor/jquery-ui/jquery-ui.css"/>
+  <link rel="stylesheet" href="/vendor/jquery-ui/ajustes_datepicker.css"/>
+
+  <script src="/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+
+<script type="text/javascript"> var locale = "<%= I18n.locale %>"</script>

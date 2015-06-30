@@ -1,0 +1,53 @@
+
+<% #listado de documentos
+   @documents= [
+           {:titulo => "Informe anual 2014", :date => "2015-02-16", :link => @informes_anuales + "/2014-GIS-Informe-Anual.pdf"},
+           {:titulo => "Informe anual 2013", :date => "2014-02-18", :link => @informes_anuales + "/2013-GIS-Informe-Anual.pdf"},
+           {:titulo => "Informe anual 2012", :date => "2013-02-19", :link => @informes_anuales + "/2012-GIS-Informe-Anual.pdf"},
+           {:titulo => "Informe anual 2011", :date => "2012-02-22", :link => @informes_anuales + "/2011-GIS-Informe-Anual.pdf"},
+           {:titulo => "Informe anual 2010", :date => "2011-02-24", :link => @informes_anuales + "/2010-GIS-Informe-Anual.pdf"},
+           {:titulo => "Informe anual 2009", :date => "2010-02-22", :link => @informes_anuales + "/2009-GIS-Informe-Anual.pdf"},
+           {:titulo => "Informe anual 2008", :date => "2009-02-01", :link => @informes_anuales + "/2008-GIS-Informe-Anual.pdf"},
+           {:titulo => "Informe anual 2007", :date => "2009-02-01", :link => @informes_anuales + "/2007-GIS-Informe-Anual.pdf"},
+           {:titulo => "Informe anual 2006", :date => "2009-02-01", :link => @informes_anuales + "/2006-GIS-Informe-Anual.pdf"},
+           {:titulo => "Informe anual 2005", :date => "2009-02-01", :link => @informes_anuales + "/2005-GIS-Informe-Anual.pdf"},
+           {:titulo => "Informe anual 2004", :date => "2009-02-01", :link => @informes_anuales + "/2004-GIS-Informe-Anual.pdf"},
+           {:titulo => "Informe anual 2003", :date => "2009-02-01", :link => @informes_anuales + "/2003-GIS-Informe-Anual.pdf"},
+           {:titulo => "Informe anual 2002", :date => "2009-02-01", :link => @informes_anuales + "/2002-GIS-Informe-Anual.pdf"},
+           {:titulo => "Informe anual 2001", :date => "2009-02-01", :link => @informes_anuales + "/2001-GIS-Informe-Anual.pdf"},
+   ]
+%>
+
+<div class="col-md-12">
+
+  <br/>
+
+
+  <div id="informes-trimestrales">
+
+    <table  class="display table table-bordered table-striped datatableId" data-ride="benchmarking">
+      <thead>
+      <tr>
+        <th class="col-md-9"><%= I18n.t 'Documento' %></th>
+        <th><%= I18n.t 'Publicación' %></th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <% @documents.each do |document| %>
+          <tr>
+            <td><i class="fa fa-download"></i> <a href="<%= document[:link] %>" target="_blank" onclick="ga('send', 'event','Investors','<%= @data[:tituloEn] %>','<%= document[:titulo] %>');"><%= document[:titulo] %> </a></td>
+            <td><%= document[:date] %></td>
+          </tr>
+      <% end %>
+
+      </tbody>
+    </table>
+
+
+  </div>
+
+
+  <div class="space10"></div>
+
+</div>

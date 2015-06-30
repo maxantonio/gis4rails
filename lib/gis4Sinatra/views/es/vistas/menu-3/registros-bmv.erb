@@ -1,0 +1,54 @@
+<% #listado de documentos
+   @documents= [
+           {:titulo => "Reporte anual 2014 CNBV", :date => "2015-04-30", :link => @informes_anuales+ "/2014-GIS-Informe-Anual-BMV.pdf"},
+           {:titulo => "Reporte anual 2013 CNBV", :date => "2014-04-01", :link => @informes_anuales+ "/2013-GIS-Informe-Anual-BMV.pdf"},
+           {:titulo => "Reporte anual 2012 CNBV", :date => "2013-04-01", :link => @informes_anuales+ "/2012-GIS-Informe-Anual-BMV.pdf"},
+           {:titulo => "Reporte anual 2011 CNBV", :date => "2012-04-01", :link => @informes_anuales+ "/2011-GIS-Informe-Anual-BMV.pdf"},
+           {:titulo => "Reporte anual 2010 CNBV", :date => "2011-04-01", :link => @informes_anuales+ "/2010-GIS-Informe-Anual-BMV.pdf"},
+           {:titulo => "Reporte anual 2009 CNBV", :date => "2010-04-01", :link => @informes_anuales+ "/2009-GIS-Informe-Anual-BMV.pdf"},
+           {:titulo => "Reporte anual 2008 CNBV", :date => "2009-04-01", :link => @informes_anuales+ "/2008-GIS-Informe-Anual-BMV.pdf"},
+           {:titulo => "Reporte anual 2007 CNBV", :date => "2008-04-01", :link => @informes_anuales+ "/2007-GIS-Informe-Anual-BMV.pdf"},
+           {:titulo => "Reporte anual 2006 CNBV", :date => "2008-04-01", :link => @informes_anuales+ "/2006-GIS-Informe-Anual-BMV.pdf"},
+           {:titulo => "Reporte anual 2005 CNBV", :date => "2006-04-01", :link => @informes_anuales+ "/2005-GIS-Informe-Anual-BMV.pdf"},
+           {:titulo => "Reporte anual 2004 CNBV", :date => "2005-04-01", :link => @informes_anuales+ "/2004-GIS-Informe-Anual-BMV.pdf"},
+           {:titulo => "Reporte anual 2003 CNBV", :date => "2005-04-01", :link => @informes_anuales+ "/2003-GIS-Informe-Anual-BMV.pdf"},
+           {:titulo => "Reporte anual 2002 CNBV", :date => "2005-04-01", :link => @informes_anuales+ "/2002-GIS-Informe-Anual-BMV.pdf"},
+           {:titulo => "Reporte anual 2001 CNBV", :date => "2005-04-01", :link => @informes_anuales+ "/2001-GIS-Informe-Anual-BMV.pdf"},
+
+   ]
+%>
+
+<div class="col-md-12">
+
+  <br/>
+
+
+  <div id="informes-trimestrales">
+
+    <table class="display table table-bordered table-striped datatableId" data-ride="benchmarking">
+      <thead>
+      <tr>
+        <th class="col-md-9"><%= I18n.t 'Documento' %></th>
+        <th><%= I18n.t 'Publicación' %></th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <% @documents.each do |document| %>
+          <tr>
+            <td><i class="fa fa-download"></i>
+              <a href="<%= document[:link] %>" target="_blank" onclick="ga('send', 'event','Inversionistas','<%= @data[:tituloES] %>','<%= document[:titulo] %>');"><%= document[:titulo] %> </a></td>
+            <td><%= document[:date] %></td>
+          </tr>
+      <% end %>
+
+      </tbody>
+    </table>
+
+
+  </div>
+
+
+  <div class="space10"></div>
+
+</div>

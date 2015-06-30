@@ -1,0 +1,16 @@
+source 'http://rubygems.org'
+gem 'sinatra'
+gem 'i18n'
+gem 'pony'
+gem 'sinatra-contrib'
+
+
+group :development do
+  gem "better_errors"
+  gem "binding_of_caller"
+end
+gem 'carrierwave'
+gem 'sqlite3', '~> 1.3.10'
+gem 'sequel', '~> 4.23.0'
+gem 'carrierwave-sequel', '~> 0.1.0'
+gem 'sinatra-formkeeper', '~> 0.0.7'

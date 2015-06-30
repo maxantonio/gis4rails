@@ -1,0 +1,105 @@
+<% #listado de documentos
+   @documents= [
+           {:titulo => "GISSA informa sobre integración del Comité de Auditoría y de Prácticas Societarias", :date => "2015-23-04", :link => @comunicados_path+"/2015-04-23%20Integracion%20de%20Comites.pdf"},
+           {:titulo => "GISSA informa sobre nombramiento de nuevos miembros del Consejo", :date => "2015-04-22", :link => @comunicados_path+"/2015-04-22%20Nuevos%20Miembros%20del%20Consejo%20de%20Administracion.pdf"},
+           {:titulo => "Financiamiento Evercast", :date => "2015-03-31", :link => @comunicados_path+"/2015-03-31%20Financiamiento%20Evercast.pdf"},
+           {:titulo => " Fagor Ederlan y GISSA constituyen una Joint Venture para construir una nueva planta de maquinado", :date => "2015-02-17", :link => @comunicados_path+"/2015-02-17%20JV%20GIS%20-%20Fagor%20Ederlan.pdf"},
+           {:titulo => "GISSA concluye la adquisición del Negocio de Conducción de Fluidos", :date => "2014-12-01", :link => @comunicados_path+"/2014-12-01%20Cierre%20Adquisicion%20Funcosa.pdf"},
+           {:titulo => "Cambios en Consejo de Administración", :date => "2014-10-23", :link => @comunicados_path+"/2014-10-23%20Cambios%20en%20Consejo%20de%20Administracion2.pdf"},
+           {:titulo => "Acuerdo de Adquisición Funcosa", :date => "2014-10-14", :link => @comunicados_path+"/2014-10-14%20Acuerdo%20Adquisicion%20Funcosa.pdf"},
+           {:titulo => "Cambios en DGAF", :date => "2014-10-02", :link => @comunicados_path+"/02-10-2014%20EVENTORE%20Cambios%20en%20DGAF.pdf"},
+           {:titulo => "INAUGURACIÓN DE NUEVA PLANTA DE AUTOPARTES EN SLP", :date => "2014-06-26", :link => @comunicados_path+"/2014-06-26%20Inauguracion%20Planta%20de%20Fundicion%20SLP.pdf"},
+           {:titulo => "Aprobación Alianza TRW", :date => "2014-06-10", :link => @comunicados_path+"/2014-06-10%20Aprobacion%20Alianza%20TRW.pdf"},
+
+           {:titulo => "Movimientos inusitados en la negociación de los valores ", :date => "2014-05-27", :link => @comunicados_path+"/2014-05-27%20Movimientos%20Inusitados.pdf"},
+           {:titulo => "Movimientos inusitados en la negociación de los valores", :date => "2014-05-15", :link => @comunicados_path+"/2014-05-15%20Movimientos%20Inusitados.pdf"},
+           {:titulo => "Transición Gobierno Corporativo", :date => "2014-05-05", :link => @comunicados_path+"/2014-05-05%20Transicion%20Gobierno%20Corporativo.pdf"},
+           {:titulo => "Integración del Comité de Auditoría y de Prácticas Societarias", :date => "2014-04-23", :link => @comunicados_path+"/2014-04-23%20Integracion_del_Comite_de_Auditoria_y_de_Practicas_Societarias.pdf"},
+           {:titulo => "Movimientos inusitados en la negociación de los valores", :date => "2014-03-28", :link => @comunicados_path+"/2014-03-28%20Movimientos%20Inusitados.pdf"},
+           {:titulo => "Opinión del Auditor Dictamen 2013", :date => "2014-03-19", :link => @comunicados_path+"/2014-03-19%20Op%20Auditor%20Dictamen%202013.pdf"},
+           {:titulo => "GISSA ANUNCIA COINVERSIÓN PARA EL ESTABLECIMIENTO DE UNA NUEVA FUNDICIÓN CON TRW", :date => "2014-02-04", :link => @comunicados_path+"/2014-02-04%20Evento%20Relevante%20JV%20GIS%20TRW.pdf"},
+           {:titulo => "Movimientos inusitados en la negociación de los valores", :date => "2013-12-20", :link => @comunicados_path+"/2013-12-20%20Movimientos%20Inusitados.pdf"},
+           {:titulo => "GISSA informa sobre la separación de funciones de Presidente del Consejo y Director General de GIS", :date => "2013-12-17", :link => @comunicados_path+"/2013-12-17_Presidencia_y_DG.pdf"},
+           {:titulo => "GISSA Propondrá pago de Dividendo", :date => "2013-11-21", :link => @comunicados_path+"/EventoreAsamblea10dic2013.pdf"},
+
+           {:titulo => "Movimientos inusitados en la negociación de los valores", :date => "2013-08-30", :link => @comunicados_path+"/2013-08-30%20Movimientos%20Inusitados.pdf"},
+           {:titulo => "GISSA informa sobre volumen operado de su acción", :date => "2013-05-15", :link => @comunicados_path+"/Volumen%2015-05-13.pdf"},
+           {:titulo => "Integración del Comité de Auditoría y de Prácticas Societarias", :date => "2013-05-14", :link => @comunicados_path+"/Integracion%20del%20Comite%20de%20Auditoria%20y%20de%20Practicas%20Societarias%202013.pdf"},
+           {:titulo => "GISSA informa sobre reenvío de Reporte Trimestral al 1T13", :date => "2013-04-25", :link => @comunicados_path+"/Reenvio%20Informacion%20Financiera%20Primer%20Trimestre%202013.pdf"},
+           {:titulo => "Volumen y Precio de la Acción", :date => "2013-04-10", :link => @comunicados_path+"/Volumen%20y%20Precio.pdf"},
+           {:titulo => "Opinión del Auditor Dictamen 2012", :date => "2013-03-21", :link => @comunicados_path+"/Opinion%20Auditor%20Dictamen%202012.pdf"},
+           {:titulo => "GISSA informa sobre Cancelación de Acciones Recompradas y Conversión de acciones Serie S", :date => "2013-01-30", :link => @comunicados_path+"/Cancelacion%20y%20Conversion%20Acciones%20Serie%20S.pdf"},
+           {:titulo => "GISSA informa sobre volumen y precio de acciones serie S", :date => "2012-12-18", :link => @comunicados_path+"/Operatividad%20Acciones%20Serie%20S-1%20y%20S-2.pdf"},
+           {:titulo => "GISSA informa sobre variación en el precio de acciones Serie S", :date => "2012-12-13", :link => @comunicados_path+"/Var%20Precio%20de%20Acciones%20Serie%20S-1%20y%20S-2.pdf"},
+           {:titulo => "GISSA Informa sobre volumen y precio Acciones Serie S", :date => "2012-12-04", :link => @comunicados_path+"/Precio%20de%20Acciones%20Serie%20S-1%20y%20S-2.pdf"},
+
+           {:titulo => "GISSA informa sobre Recompra de Acciones Serie", :date => "2012-11-16", :link => @comunicados_path+"/Eventore%20Recompra%20Acciones%20Serie%20S-1%20y%20S-2.pdf"},
+           {:titulo => "GISSA informa sobre Recompra de Acciones Serie ", :date => "2012-11-09", :link => @comunicados_path+"/Recompra%20Acciones%20Serie%20S.pdf"},
+           {:titulo => "GISSA informa sobre Recompra de Acciones Serie 'S' ", :date => "2012-10-09", :link => @comunicados_path+"/Fondo%20de%20Recompra%20Acciones%20Serie%20S.pdf"},
+           {:titulo => "GISSA informa sobre operación de Recompra y Recolocación de acciones serie 'S' ", :date => "2012-09-07", :link => @comunicados_path+"/Adquisicion%20Acciones%20Serie%20S.pdf"},
+           {:titulo => "GISSA informa sobre intención de recomprar acciones serie 'S'", :date => "2012-09-07", :link => @comunicados_path+"/Aviso%20Adquisicion%20Acciones%20Serie%20S.pdf"},
+           {:titulo => "Variación en el precio de la acción", :date => "2012-09-06", :link => @comunicados_path+"/Variacion%20en%20el%20precio%20de%20la%20accion%206%20Sep%202012.pdf"},
+           {:titulo => "GISSA Informa Integración del Comité de Auditoría y de Prácticas Societarias", :date => "2012-04-26", :link => @comunicados_path+"/Integracion%20del%20Comite%20de%20Auditoria%20y%20de%20Practicas%20Societarias.pdf"},
+           {:titulo => "GIS Concluye la desincorporación de su Negocio de Fundición de Blocks y Cabezas de Hierro", :date => "2012-04-16", :link => @comunicados_path+"/Cierre%20Desincorporacion%20Negocio%20ByC.pdf"},
+           {:titulo => "Opinión del Auditor Dictamen 2011", :date => "2012-03-23", :link => @comunicados_path+"/Opinion%20Auditor%20Dictamen%202011.pdf"},
+           {:titulo => "GISSA completa la adquisición del Negocio de Fundición de Xignux", :date => "2011-11-30", :link => @comunicados_path+"/Cierre%20Adquisicion%20Tisamatic.pdf"},
+
+           {:titulo => "GIS alcanza acuerdo para la venta de su Negocio de Fundición de Blocks y Cabezas de Hierro", :date => "2011-11-15", :link => @comunicados_path+"/Desincorporacion-Negocio-ByC.pdf"},
+           {:titulo => "Precio en postura de compra", :date => "2011-10-20", :link => @comunicados_path+"/Precio%20Accion%2020%20Oct%202011.pdf"},
+           {:titulo => "Precio en postura de compra", :date => "2011-09-29", :link => @comunicados_path+"/Precio%20Accion%2029%20Sep%202011.pdf"},
+           {:titulo => "Adquisición del Negocio de Fundición Xignux", :date => "2011-07-23", :link => @comunicados_path+"/Adquisicion%20Negocio%20Fundicion%20Xignux.pdf"},
+           {:titulo => "Refinanciamiento Technocast", :date => "2011-06-30", :link => @comunicados_path+"/Refinanciamiento%20Technocast.pdf"},
+           {:titulo => "Aumento de Capacidad en Planta Calentadores Saltillo", :date => "2011-06-29", :link => @comunicados_path+"/Aumento%20Capacidad%20Planta%20Calentadores.pdf"},
+           {:titulo => "Opinión del Auditor Dictamen 2010", :date => "2011-02-24", :link => @comunicados_path+"/Opinion%20Auditor%20Dictamen%202010_.pdf"},
+           {:titulo => "Inicio de Cotización Acciones Serie S", :date => "2010-12-16", :link => @comunicados_path+"/InicioCotizacionAccionesSerieS.pdf"},
+
+
+           # {:titulo => "Postura de Mercado", :date => "2010-10-04", :link => @comunicados_path+"/PosturaPrecioAcci%C3%B3n04-Oct-2010.pdf"},
+
+
+           {:titulo => "Nombramiento de Consejero Provisional y Miembro del Comité de Auditoria ", :date => "2010-09-21", :link => @comunicados_path+"/ConsejeroProvisionalyMiembroCAC.pdf"},
+           {:titulo => "GIS Informa Integración del Comité de Auditoria y de Prácticas Societarias", :date => "2010-05-25", :link => @comunicados_path+"/IntegraciondelComitedeAuditoriaydePracticasSocietarias2.pdf"},
+
+   ]
+%>
+
+<div class="col-md-12">
+
+  <br/>
+
+
+  <div id="informes-trimestrales">
+
+    <table class="display table table-bordered table-striped datatableId" data-ride="benchmarking">
+      <thead>
+      <tr>
+        <th class="col-md-9"><%= I18n.t 'Documento' %></th>
+        <th><%= I18n.t 'Publicación' %></th>
+
+      </tr>
+      </thead>
+      <tbody>
+      <% @documents.each do |document| %>
+          <tr>
+            <td><i class="fa fa-download"></i>
+
+              <a href="<%= document[:link] %>" target="_blank" onclick="ga('send', 'event','Inversionistas','<%= @data[:tituloES] %>','<%= document[:titulo] %>');">
+
+                <%= document[:titulo] %> </a>
+
+            </td>
+
+            <td><%= document[:date] %></td>
+          </tr>
+      <% end %>
+
+      </tbody>
+    </table>
+
+
+  </div>
+
+
+  <div class="space10"></div>
+
+</div>

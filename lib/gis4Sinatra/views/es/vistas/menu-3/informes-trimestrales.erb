@@ -1,0 +1,63 @@
+
+<% #listado de documentos
+   @documents= [
+           {:titulo => "Reporte de resultados 1T15", :date => "2015-04-23", :link => @informes_trimestrales + "/2015-GIS-1T15.pdf", :linkBMV => @reportes_trimestrales_BMV + "/1T15-BMV.pdf"},
+           {:titulo => "Reporte de resultados 4T14", :date => "2015-02-18", :link => @informes_trimestrales + "/2014-GIS-4T14.pdf", :linkBMV => @reportes_trimestrales_BMV + "/4T14-BMV.pdf"},
+           {:titulo => "Reporte de resultados 3T14", :date => "2014-10-23", :link => @informes_trimestrales + "/2014-GIS-3T14.pdf", :linkBMV => @reportes_trimestrales_BMV + "/3T14-BMV.pdf"},
+           {:titulo => "Reporte de resultados 2T14", :date => "2014-06-28", :link => @informes_trimestrales + "/2014-GIS-2T14.pdf", :linkBMV => @reportes_trimestrales_BMV + "/2T14-BMV.pdf"},
+           {:titulo => "Reporte de resultados 1T14", :date => "2014-04-23", :link => @informes_trimestrales + "/2014-GIS-1T14.pdf", :linkBMV => @reportes_trimestrales_BMV + "/1T14-BMV.pdf"},
+           {:titulo => "Reporte de resultados 4T13", :date => "2014-02-20", :link => @informes_trimestrales + "/2013-GIS-4T13.pdf", :linkBMV => @reportes_trimestrales_BMV + "/4T13-BMV.pdf"},
+           {:titulo => "Reporte de resultados 3T13", :date => "2013-10-23", :link => @informes_trimestrales + "/2013-GIS-3T13.pdf", :linkBMV => @reportes_trimestrales_BMV + "/3T13-BMV.pdf"},
+           {:titulo => "Reporte de resultados 2T13", :date => "2013-07-25", :link => @informes_trimestrales + "/2013-GIS-2T13.pdf", :linkBMV => @reportes_trimestrales_BMV + "/2T13-BMV.pdf"},
+           {:titulo => "Reporte de resultados 1T13", :date => "2013-04-23", :link => @informes_trimestrales + "/2013-GIS-1T13.pdf", :linkBMV => @reportes_trimestrales_BMV + "/1T13-BMV.pdf"},
+
+           {:titulo => "Reporte de resultados 4T12", :date => "2013-02-21", :link => @informes_trimestrales + "/2012-GIS-4T12.pdf", :linkBMV => @reportes_trimestrales_BMV + "/4T12-BMV.pdf"},
+           {:titulo => "Reporte de resultados 3T12", :date => "2012-10-22", :link => @informes_trimestrales + "/2012-GIS-3T12.pdf", :linkBMV => @reportes_trimestrales_BMV + "/3T12-BMV.pdf"},
+
+
+           {:titulo => "Reporte de resultados 2T12", :date => "2012-07-27", :link => @informes_trimestrales + "/2012-GIS-2T12.pdf", :linkBMV => @reportes_trimestrales_BMV + "/2T12-BMV.pdf"},
+           {:titulo => "Reporte de resultados 1T12", :date => "2012-04-26", :link => @informes_trimestrales + "/2012-GIS-1T12.pdf", :linkBMV => @reportes_trimestrales_BMV + "/1T12-BMV.pdf"},
+           {:titulo => "Reporte de resultados 4T11", :date => "2012-02-23", :link => @informes_trimestrales + "/2011-GIS-4T11.pdf", :linkBMV => @reportes_trimestrales_BMV + "/4T11-BMV.pdf"},
+           {:titulo => "Reporte de resultados 3T11", :date => "2011-10-27", :link => @informes_trimestrales + "/2011-GIS-3T11.pdf", :linkBMV => @reportes_trimestrales_BMV + "/3T11-BMV.pdf"},
+           {:titulo => "Reporte de resultados 2T11", :date => "2011-07-21", :link => @informes_trimestrales + "/2011-GIS-2T11.pdf", :linkBMV => @reportes_trimestrales_BMV + "/2T11-BMV.pdf"},
+           {:titulo => "Reporte de resultados 1T11", :date => "2011-04-14", :link => @informes_trimestrales + "/2011-GIS-1T11.pdf", :linkBMV => @reportes_trimestrales_BMV + "/1T11-BMV.pdf"},
+
+   ]
+%>
+
+<div class="col-md-12">
+
+  <br/>
+
+
+  <div id="informes-trimestrales">
+
+    <table  class="display table table-bordered table-striped datatableId" data-ride="benchmarking">
+      <thead>
+        <tr>
+          <th class="col-md-5"><%= I18n.t 'Documento' %></th>
+          <th class="col-md-4"><%= I18n.t 'Reportes a la BMV' %></th>
+          <th><%= I18n.t 'Publicación' %></th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <% @documents.each do |document| %>
+        <tr>
+          <td><i class="fa fa-download"></i> <a href="<%= document[:link] %>" target="_blank" onclick="ga('send', 'event','Inversionistas','<%= @data[:tituloES] %>','<%= document[:titulo] %>');"><%= document[:titulo] %> </a></td>
+          <td><i class="fa fa-download"></i> <a href="<%= document[:linkBMV] %>" target="_blank" onclick="ga('send', 'event','Inversionistas','<%= @data[:tituloES] %>','<%= document[:titulo]+"-BMV" %>');">Reporte a la BMV </a></td>
+
+          <td><%= document[:date] %></td>
+        </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+
+
+  </div>
+
+
+  <div class="space10"></div>
+
+</div>

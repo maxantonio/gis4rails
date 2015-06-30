@@ -1,0 +1,132 @@
+<!--Doctype-->
+<%= erb :"/multidioma/bloques/generales/doctype" %>
+<!--head-->
+<%= erb :"/multidioma/bloques/generales/head" %>
+
+
+
+<!-- Header-->
+<header id="home">
+
+  <%= erb :"/multidioma/bloques/generales/topbar" %>
+
+  <%= erb :"/multidioma/bloques/generales/menu" %>
+
+</header>
+<!-- Header End -->
+
+
+<!-- Content -->
+
+
+<div id="title-container">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h1><%= $menuNamesEn[@data[:menuNumber]] %></h1>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+
+
+
+  <div class="row space10"></div>
+
+  <!-- Blog Detail -->
+  <div class="row">
+    <!-- Left Bar -->
+    <%= erb :"/es/bloques/contenido/_sidebarleftcontent" %>
+    <!-- Left Bar End -->
+    <div class="col-md-8">
+
+      <!-- Content Item -->
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="row">
+            <div class="col-md-12">
+              <% if 2>1  %>
+                  <h1><%= @title %></h1>
+              <% else %>
+                  <h1>Titulo traducido</h1>
+              <% end %>
+            </div>
+
+          </div>
+          <div class="contenido">
+
+
+            <% if I18n.locale.to_s == "en" %>
+
+                <h1><%= @data[:tituloEn] %></h1>
+
+            <% else %>
+
+                <h1><%= @data[:tituloES] %></h1>
+
+            <% end %>
+
+
+
+            <% if 2 > 1 %>
+                <%= yield %>
+            <% else %>
+                Contenido Traducido
+            <% end %>
+
+            <% if 2 < 0 %>
+                <div class="space20"></div>
+                <div class="documentos">
+                  <table class="display table table-bordered table-striped" data-ride="benchmarking">
+                    <thead>
+                    <tr>
+                      <th class="col-md-9"><%= I18n.t 'Documento' %></th>
+                      <th><%= I18n.t 'Publicación' %></th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!--Ciclo para la cantidad de documentos-->
+                    <tr>
+                      <td><i class="fa fa-download"></i> <a href="#" target="_blank"> Link a Doc</a></td>
+                      <td>Fecha de Documento</td>
+                    </tr>
+                    <!--Fin de ciclo-->
+
+                    </tbody>
+                  </table>
+                </div>
+            <% end %>
+          </div>
+
+
+          <div class="space10"></div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Right Bar -->
+    <%= erb :"/en/bloques/contenido/_sidebarrigthcontent" %>
+    <!-- Right Bar End -->
+
+  </div>
+  <!-- Blog Detail End -->
+
+</div>
+
+<div class="space40"></div>
+<!-- Content End -->
+
+<!-- Promo Box -->
+<%= erb :"/multidioma/bloques/generales/promo" %>
+<!-- Promo Box End -->
+
+<!-- Footer -->
+<%= erb :"/multidioma/bloques/generales/footer" %>
+<!-- Footer End -->
+<%= erb :"/multidioma/bloques/generales/js" %>
+
