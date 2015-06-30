@@ -1,5 +1,50 @@
-<h1>New Document</h1>
+<div class="app app-header-fixed  ">
 
-<%= render 'form' %>
+  <!-- header -->
+  <%= render "admin/header" %>
+    <!-- / header -->
 
-<%= link_to 'Back', documents_path %>
+  <!-- aside -->
+  <%= render "admin/aside" %>
+  <!-- / aside -->
+
+  <!-- content -->
+  <div id="content" class="app-content" role="main">
+    <div class="app-content-body ">
+
+
+<div class="bg-light lter b-b wrapper-md">
+  <h1 class="m-n font-thin h3">Document Type</h1>
+</div>
+<div class="wrapper-md">
+  <div class="panel panel-default">
+
+    <%= render 'form' %>
+
+    <%= link_to 'Back', documents_path %>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+  <!-- / content -->
+
+  <!-- footer -->
+  <%= render "admin/footer" %>
+  <!-- / footer -->
+
+</div>
+
+
+<!-- <h1>Admin#index</h1>
+<% if user_signed_in? %>
+    Logged in as <strong><%= current_user.email %></strong>.
+    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+<p>Find me in app/views/admin/index.html.erb</p>
+<%= link_to 'New Document', new_document_path %> -->

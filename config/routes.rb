@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'admin' => 'admin#index'
+  get 'doc/:id' => 'admin#documents'
   resources :documents
 
   # Montando sintra app
