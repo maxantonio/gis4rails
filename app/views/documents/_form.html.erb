@@ -44,6 +44,14 @@
     </div>
 
     <div class="form-group">
+      <%= f.label :file_translation %>
+      <br/>
+      <%= f.file_field :file_translation %><br/>
+      <!--<%= f.hidden_field :file_translation_cache %>-->
+
+    </div>
+
+    <div class="form-group">
       <%= f.label :release_date %>
       <br/>
       <%= f.text_field :release_date, :class => 'form-control ', autofocus: true %>
